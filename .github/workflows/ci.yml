@@ -8,9 +8,6 @@ on:
 
 jobs:
 
-	name: PostgreSQL service example
-	on: push
-	
   test:
 		runs-on: ubuntu-latest
 		
@@ -38,6 +35,6 @@ jobs:
 		
 		- name: Run migrations
 			run: make migrateup
-			
+
     - name: Test
       run: make test
