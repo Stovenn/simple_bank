@@ -9,7 +9,19 @@ on:
 jobs:
 
   test:
-    runs-on: ubuntu-latest
+		runs-on: ubuntu-latest
+		services:
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_USERNAME: root
+          POSTGRES_PASSWORD: secret
+          POSTGRES_DB: simple_bank
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retrie
     steps:
     - uses: actions/checkout@v2
 
