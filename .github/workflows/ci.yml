@@ -29,7 +29,10 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: ^1.15
-        
+
+      - name: Run migrations
+        uses: make migrateup
+
       - name: Build
         run: go build -v ./...
       
