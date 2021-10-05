@@ -17,7 +17,7 @@ var testQueries *Queries
 var testDB *sql.DB
 
 func TestMain(m *testing.M) {
-	var err error
+	var err error   
 
 	testDB, err = sql.Open(dbDriver, dbSource)
 	if err != nil {
