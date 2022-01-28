@@ -1,12 +1,14 @@
 package main
 
 import (
-	"github.com/stovenn/simple_bank/db/util"
 	"database/sql"
 	"log"
 
+	api "github.com/stovenn/simple_bank/api"
+	"github.com/stovenn/simple_bank/db/util"
+
 	_ "github.com/lib/pq"
-	"github.com/stovenn/simple_bank/api"
+
 	db "github.com/stovenn/simple_bank/db/sqlc"
 )
 
